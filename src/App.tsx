@@ -1,25 +1,25 @@
+import { ThemeProvider } from '@emotion/react';
+import { Box } from '@mui/material';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import HorizontalLinearStepper from './components/form';
+import theme from './theme/theme';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider  theme={theme}>
+    <Box className="App">
+       <Box className='App-header'>
+     <h1> Lets get down to business </h1>
+     
+     <h2> To defeat the huns !</h2>
+    </Box>
+
+    <Box className='App-body'>
+      <HorizontalLinearStepper></HorizontalLinearStepper>
+ </Box>
+
+    </Box>
+    </ThemeProvider>
   );
 }
 
